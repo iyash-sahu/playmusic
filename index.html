@@ -1,0 +1,1606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Utafy - Web Music Player</title>
+  <link rel="icon" href="img/uta.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <!-- external css  -->
+  <link rel="stylesheet" href="structured.css" />
+  
+  
+</head>
+<body>
+  <!-- Sticky Navbar -->
+  <nav class="navbar">
+    <div class="navbar-left">
+      <div class="tooltip">
+        <img src="img/uta.png" alt="Utafy Logo" class="logo">
+        <span class="tooltiptext">Utafy</span>
+      </div>
+      <div class="tooltip">
+        <i class="fas fa-home home-icon"></i>
+        <span class="tooltiptext">Home</span>
+      </div>
+      <div class="search-container">
+        <div class="search-box">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" placeholder="What do you want to play?">
+          <i class="fa-solid fa-microphone mic-icon"></i>
+        </div>
+        <div class="vertical-line"></div>
+        <img src="images/backward_icon.png" class="search-arrow left-arrow" alt="">
+        <img src="images/forward_icon.png" class="search-arrow right-arrow" alt="">
+      </div>
+    </div>
+
+    <div class="navbar-right">
+      <span class="btn faded">Install App</span>
+      <span class="btn faded">Sign up</span>
+      <span class="btn login-btn">Log in</span>
+    </div>
+  </nav>
+
+  <div class="flex">
+    <!-- Left Library -->
+    <aside class="library bg-grey rounded m-1 p-1 left">
+      <div class="heading">
+        <img class="invert" src="img/playlist.svg" alt="">
+        <h2>Your Library</h2>
+      </div>
+      <div class="songList">
+        <ul>
+          <li>
+            <img class="invert" src="img/music.svg" alt="music">
+            <div class="info">
+              <div>Song Name</div>
+              <div>Artist</div>
+            </div>
+            <img src="img/play.svg" alt="play">
+          </li>
+        </ul>
+      </div>
+      <div class="footer">
+        <a href="#">Legal</a><a href="#">Privacy</a><a href="#">Cookies</a>
+      </div>
+    </aside>
+
+    <!-- Right Section -->
+    <main class="right bg-grey rounded">
+
+      <!-- Trending Now -->
+
+
+      <!-- -----Recently Played------- -->
+      <h2>Recently Played</h2>
+      <div class="cardContainer">
+
+
+        
+
+        <div class="card" data-folder="songs/EH">
+            <div class="Recent-play">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+                  stroke-width="1.5" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <img src="images/EmraanHashmi.jpg" alt="">
+            <h2>Emraan Hashmi!</h2>
+            <p>Akkha Bollywood ke playlist ek taraf, <br>Emraan Hashmi ki playlist ek taraf.</p>
+          </div>
+
+
+        <div class="card" data-folder="songs/TeluguMusic">
+            <div class="Recent-play">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+                  stroke-width="1.5" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <img src="images/tollywood.jpg" alt="">
+            <h2>tollywood Pearls!</h2>
+            <p>The Finest set of Telugu music from the past 10 years.</p>
+          </div>
+
+
+          
+
+
+          <div class="card" data-folder="songs/8d">
+            <div class="Recent-play">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+                  stroke-width="1.5" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <img src="images/8dmusic.jpg" alt="">
+            <h2>8D Music!</h2>
+            <p>Immersive 8D audio that surrounds you from every angle.</p>
+          </div>
+
+
+          <div class="artist" data-folder="songs/RFAK" data-artist="Rahat Fateh Ali Khan">
+          <div class="Recent-play-artist">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+              <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+                stroke-width="1.5" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <img src="images/Rahat-Fateh-Ali-Khan.png" class="artist-img" />
+          <p class="artist-name">Rahat Fateh Ali Khan</p>
+          <p class="artist-info">Artist</p>
+        </div>
+
+          
+
+      </div>
+
+
+
+      <!-- Popular Playlists -->
+      <h2>Popular Playlists</h2>
+      <div class="cards-container trending">
+
+
+          
+
+
+          <div class="card" data-folder="songs/KK" data-artist="KK">
+              <div class="playbtn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                  <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+                    stroke-width="1.5" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <img src="images/thisiskk.jpg" class="card-img" />
+              <p class="card-title">Hits of KK</p>
+              <p class="card-info">Handpicked Hindi Songs of GOAT KK </p>
+          </div>
+
+
+          <div class="card" data-folder="songs/atif" data-artist="Atif Aslam">
+              <div class="playbtn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                  <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+                    stroke-width="1.5" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <img src="images/atifa.jpg" class="card-img" />
+              <p class="card-title">Hits of Atif Aslam</p>
+              <p class="card-info">This is Atif Aslam. The essential tracks, all in one playlist</p>
+          </div>
+
+
+          <div class="card" data-folder="songs/RFAK" data-artist="Rahat Fateh Ali Khan">
+              <div class="playbtn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                  <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+                    stroke-width="1.5" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <img src="images/RFAK.jpg" class="card-img" />
+              <p class="card-title">Best Of Rahat Fateh Ali Khan</p>
+              <p class="card-info">By simran</p>
+          </div>
+
+
+          <div class="card" data-folder="songs/mohit" data-artist="Mohit Chauhan">
+              <div class="playbtn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                  <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+                    stroke-width="1.5" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <img src="images/mohitchauhan.jpg" class="card-img" />
+              <p class="card-title">Best of Mohit Chauhan</p>
+              <p class="card-info">his is Mohit Chauhan. The essential tracks, all in one playlist.</p>
+          </div>
+          <div class="card" data-folder="songs/pritam" data-artist="Pritam">
+              <div class="playbtn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                  <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+                    stroke-width="1.5" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <img src="images/pritam.jpg" class="card-img" />
+              <p class="card-title">Pritam Hit Songs</p>
+              <p class="card-info">Top Pritam hit songs from Bollywood movies like Ae Dil Hai Mushkil, Barfi!, Jab We Met & more. Enjoy the best of Pritam...</p>
+          </div>
+      </div>
+
+
+
+  <!-- Popular Artist Section -->
+  <h2>Popular Artist</h2>
+  <div class="artist-container">
+
+    <div class="artist" data-folder="songs/Arijit" data-artist="Arijit Singh">
+      <img src="images/arijitS.jfif" class="artist-img" />
+      <p class="artist-name">Arijit Singh</p>
+      <p class="artist-info">Artist</p>
+      <div class="plays">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+          <path d="M5 20V4L19 12L5 20Z" fill="#000" />
+        </svg>
+      </div>
+    </div>
+
+    <div class="artist" data-folder="songs/AR" data-artist="A.R. Rahman">
+      <img src="images/AR.jfif" class="artist-img" />
+      <p class="artist-name">A.R. Rahman</p>
+      <p class="artist-info">Artist</p>
+      <div class="plays">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+          <path d="M5 20V4L19 12L5 20Z" fill="#000" />
+        </svg>
+      </div>
+    </div>
+
+    <div class="artist" data-folder="songs/Shreya" data-artist="Shreya Ghoshal">
+      <div class="plays">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+          <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+            stroke-width="1.5" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <img src="images/Shreya.jfif" class="artist-img" />
+      <p class="artist-name">Shreya Ghoshal</p>
+      <p class="artist-info">Artist</p>
+    </div>
+
+
+    <div class="artist" data-folder="songs/KK" data-artist="KK">
+      <div class="plays">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+          <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+            stroke-width="1.5" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <img src="images/kk1.jfif" class="artist-img" />
+      <p class="artist-name">KK</p>
+      <p class="artist-info">Artist</p>
+    </div>
+
+
+
+    
+
+    <div class="artist" data-folder="songs/KishoreKumar" data-artist="Kishore Kumar">
+      <div class="plays">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+          <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+            stroke-width="1.5" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <img src="images/KishoreKumar.jpg" class="artist-img" />
+      <p class="artist-name">Kishore Kumar</p>
+      <p class="artist-info">Artist</p>
+    </div>
+
+
+
+
+    <div class="artist" data-folder="songs/Sanam" data-artist="Sanam Puri">
+      <div class="plays">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+          <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+            stroke-width="1.5" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <img src="images/Sanam.jpg" class="artist-img" />
+      <p class="artist-name">Sanam</p>
+      <p class="artist-info">Artist</p>
+    </div>
+
+
+
+
+
+    
+    <div class="artist" data-folder="songs/Pritam" data-artist="Pritam">
+      <div class="plays">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+          <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+            stroke-width="1.5" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <img src="images/Pritamlogo.jfif" class="artist-img" />
+      <p class="artist-name">Pritam</p>
+      <p class="artist-info">Artist</p>
+    </div>
+
+
+    
+
+
+
+    <div class="artist" data-folder="songs/VishalMishra" data-artist="Vishal Mishra">
+      <div class="plays">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+          <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+            stroke-width="1.5" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <img src="images/Vishal-Mishra.jfif" class="artist-img" />
+      <p class="artist-name">Vishal Mishra</p>
+      <p class="artist-info">Artist</p>
+    </div>
+
+    <div class="artist" data-folder="songs/AdityaRikhari" data-artist="Aditya Rikhari">
+      <div class="plays">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+          <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+            stroke-width="1.5" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <img src="images/adityarikhari.jpg" class="artist-img" />
+      <p class="artist-name">Aditya Rikhari</p>
+      <p class="artist-info">Artist</p>
+    </div>
+
+
+    <div class="artist" data-folder="songs/AnuvJain" data-artist="Anuv Jain">
+      <div class="plays">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+          <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+            stroke-width="1.5" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <img src="images/anuv.jfif" class="artist-img" />
+      <p class="artist-name">Anuv Jain</p>
+      <p class="artist-info">Artist</p>
+    </div>
+
+
+    <div class="artist" data-folder="songs/Atif" data-artist="Atif Aslam">
+      <div class="plays">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+          <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+            stroke-width="1.5" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <img src="images/atiff.jfif" class="artist-img" />
+      <p class="artist-name">Atif Aslam</p>
+      <p class="artist-info">Artist</p>
+    </div>
+
+
+
+
+    <div class="artist" data-folder="songs/HimeshR" data-artist="Himesh Reshammiya">
+      <div class="plays">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+          <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+            stroke-width="1.5" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <img src="images/himeshr.webp" class="artist-img" />
+      <p class="artist-name">Himesh Reshammiya</p>
+      <p class="artist-info">Artist</p>
+    </div>
+
+    <div class="artist" data-folder="songs/Alka" data-artist="Alka Yagnik">
+      <div class="plays">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+          <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+            stroke-width="1.5" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <img src="images/Alka.jfif" class="artist-img" />
+      <p class="artist-name">Alka Yagnik</p>
+      <p class="artist-info">Artist</p>
+    </div>
+
+
+
+
+    <div class="artist" data-folder="songs/Armaan" data-artist="Armaan Malik">
+      <div class="plays">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+          <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+            stroke-width="1.5" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <img src="images/Armaan.jpg" class="artist-img" />
+      <p class="artist-name">Armaan Malik </p>
+      <p class="artist-info">Artist</p>
+    </div>
+
+
+    <div class="artist" data-folder="songs/AshaBhosle" data-artist="Asha Bhosle">
+      <div class="plays">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+          <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+            stroke-width="1.5" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <img src="images/Asha.jpg" class="artist-img" />
+      <p class="artist-name">Asha Bhosle </p>
+      <p class="artist-info">Artist</p>
+    </div>
+
+
+    <div class="artist" data-folder="songs/GajendraVerma" data-artist="Gajendra Verma">
+      <div class="plays">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+          <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+            stroke-width="1.5" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <img src="images/Gajendra.jfif" class="artist-img" />
+      <p class="artist-name">Gajendra Verma</p>
+      <p class="artist-info">Artist</p>
+    </div>
+
+
+    <div class="artist" data-folder="songs/JagjitSingh" data-artist="Jagjit Singh">
+      <div class="plays">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+          <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+            stroke-width="1.5" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <img src="images/Jagjit.jpg" class="artist-img" />
+      <p class="artist-name">Jagjit Singh</p>
+      <p class="artist-info">Artist</p>
+    </div>
+
+
+    <div class="artist" data-folder="songs/JavedAli" data-artist="Javed Ali">
+      <div class="plays">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+          <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+            stroke-width="1.5" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <img src="images/JavedAli.jfif" class="artist-img" />
+      <p class="artist-name">Javed Ali</p>
+      <p class="artist-info">Artist</p>
+    </div>
+
+
+    <div class="artist" data-folder="songs/Darshan" data-artist="Darshan Raval">
+      <div class="plays">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+          <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+            stroke-width="1.5" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <img src="images/darshan_raval.jpg" class="artist-img" />
+      <p class="artist-name">Darshan Raval</p>
+      <p class="artist-info">Artist</p>
+    </div>
+
+
+
+
+    <div class="artist" data-folder="songs/Jubin" data-artist="Jubin Nautiyal">
+      <div class="plays">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+          <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+            stroke-width="1.5" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <img src="images/jubin.jpg" class="artist-img" />
+      <p class="artist-name">Jubin Nautiyal</p>
+      <p class="artist-info">Artist</p>
+    </div>
+
+
+
+    <div class="artist" data-folder="songs/KailashKher" data-artist="Kailash Kher">
+      <div class="plays">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+          <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+            stroke-width="1.5" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <img src="images/kailash-kher.jpg" class="artist-img" />
+      <p class="artist-name">Kailash Kher</p>
+      <p class="artist-info">Artist</p>
+    </div>
+
+
+
+    <div class="artist" data-folder="songs/lata" data-artist="Lata Mangeskar">
+      <div class="plays">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+          <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+            stroke-width="1.5" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <img src="images/lata.jpg" class="artist-img" />
+      <p class="artist-name">Lata Mangeskar</p>
+      <p class="artist-info">Artist</p>
+    </div>
+
+
+    <div class="artist" data-folder="songs/ImraanKhan" data-artist="Imraan Khan">
+      <div class="plays">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+          <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+            stroke-width="1.5" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <img src="images/imran-khan1.jpg" class="artist-img" />
+      <p class="artist-name">Imraan Khan</p>
+      <p class="artist-info">Artist</p>
+    </div>
+
+
+
+    <div class="artist" data-folder="songs/KunalG" data-artist="Kunal Ganjawala">
+      <div class="plays">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+          <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+            stroke-width="1.5" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <img src="images/KunalG.jpg" class="artist-img" />
+      <p class="artist-name">Kunal Ganjawala</p>
+      <p class="artist-info">Artist</p>
+    </div>
+
+
+
+
+    <div class="artist" data-folder="songs/luckyali" data-artist="Lucky Ali">
+      <div class="plays">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+          <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+            stroke-width="1.5" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <img src="images/luckyali.jpg" class="artist-img" />
+      <p class="artist-name">Lucky Ali</p>
+      <p class="artist-info">Artist</p>
+    </div>
+
+
+
+    <div class="artist" data-folder="songs/MohhamadRafi" data-artist="Mohhammad Rafi">
+      <div class="plays">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+          <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+            stroke-width="1.5" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <img src="images/mdrafi.jpg" class="artist-img" />
+      <p class="artist-name">Mohhammad Rafi</p>
+      <p class="artist-info">Artist</p>
+    </div>
+
+
+
+    <div class="artist" data-folder="songs/mukesh" data-artist="Mukesh">
+      <div class="plays">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+          <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+            stroke-width="1.5" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <img src="images/mukesh.webp" class="artist-img" />
+      <p class="artist-name">Mukesh</p>
+      <p class="artist-info">Artist</p>
+    </div>
+
+
+    <div class="artist" data-folder="songs/HoneySingh" data-artist="Yo Yo Honey Singh">
+      <div class="plays">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+          <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+            stroke-width="1.5" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <img src="images/honeySingh.jpeg" class="artist-img" />
+      <p class="artist-name">Yo Yo Honey Singh</p>
+      <p class="artist-info">Artist</p>
+    </div>
+
+
+
+    <div class="artist" data-folder="songs/RFAK" data-artist="Rahat Fateh Ali Khan">
+      <div class="plays">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+          <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+            stroke-width="1.5" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <img src="images/Rahat-Fateh-Ali-Khan.png" class="artist-img" />
+      <p class="artist-name">Rahat Fateh Ali Khan</p>
+      <p class="artist-info">Artist</p>
+    </div>
+
+
+    
+
+
+
+
+    <div class="artist" data-folder="songs/Shaan" data-artist="Shaan">
+      <div class="plays">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+          <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+            stroke-width="1.5" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <img src="images/Shaan.jpg" class="artist-img" />
+      <p class="artist-name">Shaan</p>
+      <p class="artist-info">Artist</p>
+    </div>
+
+
+
+
+    <div class="artist" data-folder="songs/neetiMohan" data-artist="Neeti Mohan">
+      <div class="plays">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+          <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+            stroke-width="1.5" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <img src="images/neetiMohan.jfif" class="artist-img" />
+      <p class="artist-name">Neeti Mohan</p>
+      <p class="artist-info">Artist</p>
+    </div>
+
+
+
+    <div class="artist" data-folder="songs/PalakMuchhal" data-artist="Palak Muchhal">
+      <div class="plays">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+          <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+            stroke-width="1.5" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <img src="images/Palak.jfif" class="artist-img" />
+      <p class="artist-name">Palak Muchhal</p>
+      <p class="artist-info">Artist</p>
+    </div>
+
+
+    <div class="artist" data-folder="songs/RashidAli" data-artist="Rashid Ali">
+      <div class="plays">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+          <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+            stroke-width="1.5" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <img src="images/Rashid.jfif" class="artist-img" />
+      <p class="artist-name">Rashid Ali</p>
+      <p class="artist-info">Artist</p>
+    </div>
+
+
+    <div class="artist" data-folder="songs/RD" data-artist="R.D. Burman">
+      <div class="plays">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+          <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+            stroke-width="1.5" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <img src="images/RD.jpg" class="artist-img" />
+      <p class="artist-name">R.D. Burman</p>
+      <p class="artist-info">Artist</p>
+    </div>
+
+
+
+    <div class="artist" data-folder="songs/SalimMerchant" data-artist="Salim Merchant">
+      <div class="plays">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+          <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+            stroke-width="1.5" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <img src="images/Salim-merchant.avif" class="artist-img" />
+      <p class="artist-name">Salim Merchant</p>
+      <p class="artist-info">Artist</p>
+    </div>
+
+
+
+    
+    
+
+    <div class="artist" data-folder="songs/AshKing" data-artist="Ash King">
+      <div class="plays">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+          <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+            stroke-width="1.5" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <img src="images/AshKing.webp" class="artist-img" />
+      <p class="artist-name">Ash King</p>
+      <p class="artist-info">Artist</p>
+    </div>
+
+
+
+
+    <div class="artist" data-folder="songs/Ankit" data-artist="Ankit Tiwari">
+      <div class="plays">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+          <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+            stroke-width="1.5" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <img src="images/ankit-tiwari.webp" class="artist-img" />
+      <p class="artist-name">Ankit Tiwari</p>
+      <p class="artist-info">Artist</p>
+    </div>
+
+
+
+
+
+    
+    <div class="artist" data-folder="songs/Papon" data-artist="Papon">
+      <div class="plays">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+          <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+            stroke-width="1.5" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <img src="images/Papon.jpg" class="artist-img" />
+      <p class="artist-name">Papon</p>
+      <p class="artist-info">Artist</p>
+    </div>
+
+
+
+    <div class="artist" data-folder="songs/AdnanSami" data-artist="Adnan Sami">
+      <div class="plays">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+          <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+            stroke-width="1.5" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <img src="images/AdnanSami.png" class="artist-img" />
+      <p class="artist-name">Adnan Sami</p>
+      <p class="artist-info">Artist</p>
+    </div>
+
+
+
+    <div class="artist" data-folder="songs/Shafqat" data-artist="Shafqat Amanat Ali">
+      <div class="plays">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+          <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+            stroke-width="1.5" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <img src="images/Shafqat.webp" class="artist-img" />
+      <p class="artist-name">Shafqat Amanat Ali</p>
+      <p class="artist-info">Artist</p>
+    </div>
+
+
+
+    <div class="artist" data-folder="songs/Sonu" data-artist="Sonu Nigam">
+      <div class="plays">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+          <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+            stroke-width="1.5" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <img src="images/Sonu.jpg" class="artist-img" />
+      <p class="artist-name">Sonu Nigam</p>
+      <p class="artist-info">Artist</p>
+    </div>
+
+
+
+    <div class="artist" data-folder="songs/NFAK" data-artist="Nusrat Fateh Ali Khan">
+      <div class="plays">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+          <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+            stroke-width="1.5" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <img src="images/NusratFatehAliKhan.webp" class="artist-img" />
+      <p class="artist-name">Nusrat Fateh Ali Khan</p>
+      <p class="artist-info">Artist</p>
+    </div>
+
+
+
+    <div class="artist" data-folder="songs/sunidhi" data-artist="Sunidhi Chauhan">
+      <div class="plays">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+          <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+            stroke-width="1.5" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <img src="images/sunidhi.jpg" class="artist-img" />
+      <p class="artist-name">Sunidhi Chauhan</p>
+      <p class="artist-info">Artist</p>
+    </div>
+
+
+
+    <div class="artist" data-folder="songs/VishalShekhar" data-artist="Vishal-Shekhar">
+      <div class="plays">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+          <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+            stroke-width="1.5" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <img src="images/VishalShekhar.jfif" class="artist-img" />
+      <p class="artist-name">Vishal-Shekhar</p>
+      <p class="artist-info">Artist</p>
+    </div>
+
+
+
+    <div class="artist" data-folder="songs/SachinJigar" data-artist="Sachin Jigar">
+      <div class="plays">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+          <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+            stroke-width="1.5" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <img src="images/sachinJigar.jfif" class="artist-img" />
+      <p class="artist-name">Sachin-Jigar</p>
+      <p class="artist-info">Artist</p>
+    </div>
+
+
+
+
+
+    <div class="artist" data-folder="songs/Udit" data-artist="Udit Narayan">
+      <div class="plays">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+          <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+            stroke-width="1.5" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <img src="images/udit-narayan.webp" class="artist-img" />
+      <p class="artist-name">Udit Narayan</p>
+      <p class="artist-info">Artist</p>
+    </div>
+
+    
+    <div class="artist" data-folder="songs/Abhijeet" data-artist="Abhijeet">
+      <div class="plays">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+          <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+            stroke-width="1.5" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <img src="images/Abhijeet-Bhattacharya.jpg" class="artist-img" />
+      <p class="artist-name">Abhijeet</p>
+      <p class="artist-info">Artist</p>
+    </div>
+
+
+    <div class="artist" data-folder="songs/kumarSanu" data-artist="Kumar Sanu">
+      <div class="plays">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+          <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+            stroke-width="1.5" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <img src="images/kumarSanu.jfif" class="artist-img" />
+      <p class="artist-name">Kumar Sanu</p>
+      <p class="artist-info">Artist</p>
+    </div>
+    
+    
+</div>
+
+            
+
+
+
+      <div class="spotifyPlaylists">
+        <h1>Playlists</h1>
+        <div class="cardContainer">
+          
+
+          <div class="card" data-folder="songs/trending" >
+            <div class="play">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+                  stroke-width="1.5" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <img src="images/trending.jpg" alt="">
+            <h2>Trending Now!</h2>
+            <p>The hottest tracks currently dominating charts</p>
+          </div>
+
+
+          <div class="card" data-folder="songs/OldisGold">
+            <div class="play">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+                  stroke-width="1.5" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <img src="images/OldisGold.jpg" alt="">
+            <h2>Old is Gold!</h2>
+            <p>Soulful Hindi songs for your nostalgic journey.</p>
+          </div>
+
+          <div class="card" data-folder="songs/90s">
+            <div class="play">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+                  stroke-width="1.5" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <img src="Images/90s.jpg" alt="">
+            <h2>Nothing but 90's!</h2>
+            <p>Timeless 90’s Bollywood hits that bring pure nostalgic vibes.</p>
+          </div>
+
+          <div class="card" data-folder="songs/20s">
+            <div class="play">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+                  stroke-width="1.5" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <img src="Images/2000s.jpg" alt="">
+            <h2>All Out 2000's Hindi!</h2>
+            <p>Nonstop 2000’s Bollywood hits packed with energy and emotion.</p>
+          </div>
+
+          <div class="card" data-folder="songs/GenZ_track">
+            <div class="play">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+                  stroke-width="1.5" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <img src="images/GenZ.jpg" alt="">
+            <h2>GenZ Track!</h2>
+            <p>Fresh Bollywood hits loved by today’s Gen Z crowd.</p>
+          </div>
+
+
+          <div class="card" data-folder="songs/1amfeel">
+            <div class="play">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+                  stroke-width="1.5" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <img src="images/1amfeel.jpg" alt="">
+            <h2>1AM Feels Hindi!</h2>
+            <p>Late-night Hindi tracks perfect for calm 1 AM vibes.</p>
+          </div>
+
+
+
+          <div class="card" data-folder="songs/ChalaChal">
+            <div class="play">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+                  stroke-width="1.5" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <img src="images/ChalaChal.jpg" alt="">
+            <h2>Chala Chal</h2>
+            <p>Let these songs help you walk that extra mile, in life too.</p>
+          </div>
+
+
+          <div class="card" data-folder="songs/FilmyHangover">
+            <div class="play">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+                  stroke-width="1.5" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <img src="images/FilmyHangover.jpg" alt="">
+            <h2>Filmy Hangover</h2>
+            <p>Soothe your Hangover with these chill tracks.</p>
+          </div>
+
+
+
+          <div class="card" data-folder="songs/EnglishSong">
+            <div class="play">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+                  stroke-width="1.5" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <img src="images/HitEnglishSongs.webp" alt="">
+            <h2>Hit Songs English | Top Songs</h2>
+            <p>listen to the best English Songs right here.</p>
+          </div>
+
+          
+
+          <div class="card" data-folder="songs/EveningsMusic">
+            <div class="play">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+                  stroke-width="1.5" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <img src="images/evening.webp" alt="">
+            <h2>Chill Evenings</h2>
+            <p>Relaxing tracks to unwind after a long day.</p>
+          </div>
+
+
+
+          <div class="card" data-folder="songs/ListenMusicWhileDrive">
+            <div class="play">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+                  stroke-width="1.5" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <img src="images/CarMusic.jpg" alt="">
+            <h2>Drive Vibes!</h2>
+            <p>Smooth and energetic tracks made for the perfect car ride.</p>
+          </div>
+
+          <div class="card" data-folder="songs/8d">
+            <div class="play">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+                  stroke-width="1.5" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <img src="images/8dmusic.jpg" alt="">
+            <h2>8D Music!</h2>
+            <p>Immersive 8D audio that surrounds you from every angle.</p>
+          </div>
+
+
+
+          <div class="card" data-folder="songs/Bhajans">
+            <div class="play">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+                  stroke-width="1.5" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <img src="images/devotional.jfif" alt="">
+            <h2>Divine Hindi Bhajans</h2>
+            <p>Soulful devotional songs to uplift your spirit and calm your mind.</p>
+          </div>
+
+          <div class="card " data-folder="songs/GymBeats">
+            <div class="play">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+                  stroke-width="1.5" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <img src="images/gymSong.jpg" alt="">
+            <h2>Gym Beats!</h2>
+            <p>Intense beats and Bollywood bangers to push your limits.</p>
+          </div>
+
+          <div class="card " data-folder="songs/DriveVibes">
+            <div class="play">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+                  stroke-width="1.5" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <img src="images/travel.jfif" alt="">
+            <h2>Drive Vibes!</h2>
+            <p>Smooth and energetic tracks made for the perfect car ride.</p>
+          </div>
+
+
+
+          <div class="card" data-folder="songs/PopNChill">
+            <div class="Recent-play">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+                  stroke-width="1.5" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <img src="images/PopNChill.jfif" alt="">
+            <h2>Pop&Chill</h2>
+            <p>Soothing chill pop music for your listening.🎶 Sit back, relax & enjoy:3 Cover - Arijit Singh, Salim-Sulaiman</p>
+          </div>
+
+
+
+        </div>
+      </div>
+
+
+      <!-- -----Hear a little bit of everything you love.------- -->
+      <h2>More of What you like</h2>
+      <div class="cardContainer">
+
+
+        <div class="card" data-folder="songs/">
+            <div class="play">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+                  stroke-width="1.5" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <img src="images/hothits.jpg" alt="">
+            <h2>Hot Hits Hindi</h2>
+            <p>Hottest Hindi Music that Bharat is Listening to.</p>
+          </div>
+
+
+        <div class="card" data-folder="songs/">
+            <div class="play">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+                  stroke-width="1.5" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <img src="images/lofibeats.jpg" alt="">
+            <h2>Lofi Beats</h2>
+            <p>chill beats, lofi vibes, new tracks every week...</p>
+          </div>
+
+
+          <div class="card" data-folder="songs/">
+            <div class="play">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+                  stroke-width="1.5" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <img src="images/EnglishhindiMashup.jfif" alt="">
+            <h2>English x Hindi Remix/Mashup</h2>
+            <p>English and Hindi Mashup songs, Lofi Remix, Mixtape,...</p>
+          </div>
+
+
+
+          <div class="card" data-folder="songs/">
+            <div class="play">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+                  stroke-width="1.5" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <img src="images/Anime.jpg" alt="">
+            <h2>Anime On Replay</h2>
+            <p>A mega Anime hits mix! </p>
+          </div>
+
+
+
+
+          <div class="card" data-folder="songs/">
+            <div class="play">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+                  stroke-width="1.5" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <img src="images/purelyPrema.jpg" alt="">
+            <h2>purely Prema</h2>
+            <p>Magic of accoustic poured into your chai.</p>
+          </div>
+
+
+          
+
+      </div>
+
+
+      <!-- -----Popular Radio------- -->
+      <h2>Popular Radio</h2>
+      <div class="cardContainer">
+
+
+        <div class="card" data-folder="songs/">
+            <div class="play">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+                  stroke-width="1.5" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <img src="images/ladyGaga.jfif" alt="">
+            <h2>This is Lady Gaga</h2>
+            <p>By Utafy.</p>
+          </div>
+
+
+        <div class="card" data-folder="songs/">
+            <div class="play">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+                  stroke-width="1.5" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <img src="images/EdsheeranAlbum.jfif" alt="">
+            <h2>Ed Sheeran Radio</h2>
+            <p>By Utafy.</p>
+          </div>
+
+
+          <div class="card" data-folder="songs/">
+            <div class="play">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+                  stroke-width="1.5" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <img src="images/TaylorSwift.jfif" alt="">
+            <h2>Taylor Swift Radio</h2>
+            <p>By Utafy.</p>
+          </div>
+
+
+
+          <div class="card" data-folder="songs/">
+            <div class="play">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+                  stroke-width="1.5" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <img src="images/OneDirection1.jfif" alt="">
+            <h2>One Direction</h2>
+            <p>By Utafy.</p>
+          </div>
+
+
+
+
+          <div class="card" data-folder="songs/">
+            <div class="play">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+                  stroke-width="1.5" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <img src="images/billieEilish.jfif" alt="">
+            <h2>Billie Eilish</h2>
+            <p>By Utafy.</p>
+          </div>
+
+
+          
+
+      </div>
+
+      
+
+
+      <!-- -----Chill Vibes------- -->
+      <h2>Chill</h2>
+      <div class="cardContainer">
+
+
+        <div class="card" data-folder="songs/">
+            <div class="play">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+                  stroke-width="1.5" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <img src="images/BollywoodNchill.jpg" alt="">
+            <h2>Bollywood & chill</h2>
+            <p>Sit back, and chill with Bollywood's easy going Hits.</p>
+          </div>
+
+
+        <div class="card" data-folder="songs/">
+            <div class="play">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+                  stroke-width="1.5" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <img src="images/LofiVibeHindi.jpg" alt="">
+            <h2>Lofi Vibe Hindi</h2>
+            <p>Inhale & Exhale to the beats of lofi.</p>
+          </div>
+
+
+          <div class="card" data-folder="songs/">
+            <div class="play">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+                  stroke-width="1.5" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <img src="images/ChillStation.jpg" alt="">
+            <h2>Chill Station</h2>
+            <p>Soft Chill for the dreamy✨</p>
+          </div>
+
+
+
+          <div class="card" data-folder="songs/">
+            <div class="play">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+                  stroke-width="1.5" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <img src="images/ChaiNClassics.jpg" alt="">
+            <h2>Chai & Classics</h2>
+            <p>A cup of tea served with some retro tunes.</p>
+          </div>
+
+
+
+
+          <div class="card" data-folder="songs/">
+            <div class="play">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+                  stroke-width="1.5" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <img src="images/ChaiNAcoustic.jpg" alt="">
+            <h2>Chai & Acoustic</h2>
+            <p>Magic of accoustic poured into your chai.</p>
+          </div>
+
+
+          
+
+      </div>
+
+
+      <!-- -----Inspired By Your recent activity------- -->
+      <h2>Recommended for today</h2>
+      <div class="cardContainer">
+
+
+        <div class="card" data-folder="songs/">
+            <div class="play">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+                  stroke-width="1.5" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <img src="images/MannMera.jfif" alt="">
+            <h2>Mann Mera (Original Version)</h2>
+            <p>Gajendra Verma</p>
+          </div>
+
+
+        <div class="card" data-folder="songs/">
+            <div class="play">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+                  stroke-width="1.5" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <img src="images/RHTDM.jfif" alt="">
+            <h2>Rehnaa Hai Terre Dil Mein</h2>
+            <p>Anand Raj Anand</p>
+          </div>
+
+
+
+          <div class="card" data-folder="songs/">
+            <div class="play">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+                  stroke-width="1.5" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <img src="images/ShreyaG.jfif" alt="">
+            <h2>Best of Shreya Ghoshal</h2>
+            <p>Shreya Ghoshal</p>
+          </div>
+
+
+          <div class="card" data-folder="songs/">
+            <div class="play">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+                  stroke-width="1.5" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <img src="images/japaneseSoftandchill.webp" alt="">
+            <h2>Japanese Soft and chill music</h2>
+            <p>Songs that make life feel like slice-of-cute anime✨</p>
+          </div>
+
+
+
+          
+
+      </div>
+
+
+
+
+
+      <!-- -----YOUR ALBUM------- -->
+      <h2>Made for You</h2>
+      <div class="cardContainer">
+
+
+        <div class="card" data-folder="songs/LikedMusic">
+            <div class="play">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+                  stroke-width="1.5" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <img src="images/likedimage.png" alt="">
+            <h2>Liked Songs</h2>
+            <p>Yash Sahu &bull; 67 liked</p>
+          </div>
+
+
+        <div class="card" data-folder="songs/JapaneseMusic">
+            <div class="play">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+                  stroke-width="1.5" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <img src="images/Japanese.webp" alt="">
+            <h2>Japanese Soft and Chill Music</h2>
+            <p>Chill, indie, pop, and rock + anime :&#41;</p>
+          </div>
+
+
+          <div class="card" data-folder="songs/Soothing">
+            <div class="play">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+                  stroke-width="1.5" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <img src="images/awasthiPlaylist.jpg" alt="">
+            <h2>Soothing🎶</h2>
+            <p>Mahavir Awasthi &bull; 148 songs</p>
+          </div>
+
+
+
+          <div class="card" data-folder="songs/AC">
+            <div class="play">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+                  stroke-width="1.5" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <img src="images/AcademicComeback.jpg" alt="">
+            <h2>Academic Comeback</h2>
+            <p>New year Lets go</p>
+          </div>
+
+
+
+
+          <div class="card" data-folder="songs/8d">
+            <div class="play">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+                  stroke-width="1.5" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <img src="images/8dmusic.jpg" alt="">
+            <h2>8D Music!</h2>
+            <p>Immersive 8D audio that surrounds you from every angle.</p>
+          </div>
+
+
+          
+
+      </div>
+
+
+
+
+      <!-- Featured Charts -->
+      <h2>Featured Charts</h2>
+      <div class="cardContainer">
+
+          <div class="card" data-folder="songs/TopGlobal">
+              <div class="card-play">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+                      stroke-width="1.5" stroke-linejoin="round"/>
+                  </svg>
+              </div>
+              <img src="images/topsongsGlobal.jpg" class="card-img" />
+              <p class="card-title">Top Songs - Global</p>
+              <p class="card-info">Your daily updates of the most played tracks</p>
+          </div>
+
+          <div class="card" data-folder="songs/TopIndianSongs">
+              <div class="card-play">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+                      stroke-width="1.5" stroke-linejoin="round"/>
+                  </svg>
+              </div>
+              <img src="images/topsongsIndia.jpg" class="card-img" />
+              <p class="card-title">Top Songs - India</p>
+              <p class="card-info">Your daily updates of the most played tracks</p>
+          </div>
+
+          <div class="card" data-folder="songs/Top50Global">
+              <div class="card-play">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <path d="M5 20V4L19 12L5 20Z" stroke="#141834" fill="#000"
+                      stroke-width="1.5" stroke-linejoin="round"/>
+                  </svg>
+              </div>
+              <img src="images/top50.jpg" class="card-img" />
+              <p class="card-title">Top 50 - Global</p>
+              <p class="card-info">Your daily updates of the most played tracks</p>
+          </div>
+      </div>
+
+
+
+      <!-- Footer -->
+            <div class="footer">
+                <div class="line"></div>
+            </div>
+        </div>
+
+
+      <!-- Bottom Player -->
+      <div class="playbar">
+        
+        <!-- Seek Bar -->
+        <div class="seekbar">
+          <input type="range" id="seek" min="0" value="0">
+        </div>
+
+        <!-- Player Controls & Info -->
+        <div class="abovebar">
+
+          <!-- Song Info + Like -->
+          <div class="song-info">
+            <span id="currentSong">No song playing</span>
+            <!-- <img id="likeBtn" class="icon" src="img/heart1.svg" alt="Like Song" data-tooltip="Add to Liked Song"> -->
+             <!-- your heart icon -->
+            <img id="likeBtn" class="icon" src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/heart.svg" alt="Like Song" data-tooltip="Add to Liked Song">
+          </div>
+
+          <!-- Playback Controls -->
+          <div class="player-controls">
+            <img id="shuffleBtn" class="icon control" src="img/shuffle.svg" alt="Shuffle" data-tooltip="Enable Shuffle">
+            <img id="prevBtn" class="icon control" src="img/arrow-left-circle.svg" alt="Previous" data-tooltip="Previous">
+            <img id="playBtn" class="icon control" src="img/play-circle.svg" alt="Play/Pause" data-tooltip="Pause">
+            <img id="nextBtn" class="icon control" src="img/arrow-right-circle.svg" alt="Next" data-tooltip="Next">
+            <img id="repeatBtn" class="icon control" src="img/repeat.svg" alt="Repeat" data-tooltip="Enable Repeats">
+          </div>
+
+          <!-- Time, Volume, and Extra Options -->
+          <div class="time-volume">
+            
+            <div class="song-time">
+              <img id="nowPlayingBtn" class="icon small" src="img/file-earmark-music.svg" alt="Now Playing View" data-tooltip="Now Playing View">
+              <img id="lyricsBtn" class="icon small" src="img/mic.svg" alt="Lyrics" data-tooltip="Lyrics">
+              <span id="timeDisplay">00:00 / 00:00</span>
+            </div>
+
+            <div class="volume-control">
+              <img id="volumeIcon" class="icon small" src="img/volume.svg" alt="Volume" data-tooltip="Mute">
+              <input type="range" id="volume" min="0" max="1" step="0.01" value="1">
+            </div>
+
+            <div class="extra-controls">
+              <img id="miniPlayerBtn" class="icon small" src="img/miniplayer.svg" alt="Mini Player" data-tooltip="Enter miniplayer">
+              <img id="fullscreenBtn" class="icon small" src="img/fullscreen.svg" alt="Fullscreen" data-tooltip="Enter Fullscreen">
+            </div>
+
+          </div>
+        </div>
+
+        <audio id="audio"></audio>
+      </div>
+
+
+  <script src="structured.js"></script>
+</body>
+</html>
